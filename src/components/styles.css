@@ -1,3 +1,23 @@
 .app {
   display: flex;
+
+}
+
+.center-panel {
+  margin-left: 10rem;
+  margin-right: 0;
+}
+
+.center-card {
+  padding-left: 12rem;
+  padding-right: 12rem;
+}
+
+.side-panel {
+  margin-right: 0rem;
+}
+
+.side-card {
+  padding-left: 6.4em;
+  padding-right: 6.4rem;
 }
