@@ -4,7 +4,7 @@ import { Page } from "@shopify/polaris";
 const Dashboard = () => {
   return (
     <Page>
-      <h1>Dashboardss</h1>
+      <h1>Dashboard</h1>
     </Page>
   );
 };

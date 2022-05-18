@@ -1,9 +1,9 @@
 import React from "react";
 import { Frame, Navigation } from "@shopify/polaris";
 
-const items = [{ url: "/", label: "Dashboard" }];
-
 const NavigationBar = () => {
+  const items = [{ url: "/", label: "Dashboard" }];
+
   return (
     <Frame>
       <Navigation location="/">
