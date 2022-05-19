@@ -28,7 +28,7 @@ const ProductList = () => {
         }
       });
     } else {
-      //TODO: change to empty image me boyo
+      //TODO: change to empty image
       product_image = "Nothing";
     }
     product_tile = `<Card>`;

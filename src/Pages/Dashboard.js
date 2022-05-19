@@ -1,5 +1,6 @@
 import React from "react";
 import ProductList from "../components/ProductList";
+import ListItem from "../components/ListItem";
 import {
   Page,
   Card,
@@ -30,9 +31,7 @@ const Dashboard = () => {
             <div className="side-card">
               <Card.Section>
                 <Listbox>
-                  <Listbox.Option vlaue="UniqueValue-1">
-                    <ProductList />
-                  </Listbox.Option>
+                  <ListItem />
                 </Listbox>
               </Card.Section>
             </div>
