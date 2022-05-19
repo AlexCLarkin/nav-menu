@@ -1,5 +1,13 @@
 import React from "react";
-import { Page, Card, EmptyState } from "@shopify/polaris";
+import ProductList from "../components/ProductList";
+import {
+  Page,
+  Card,
+  EmptyState,
+  Listbox,
+  Heading,
+  Thumbnail,
+} from "@shopify/polaris";
 
 const Dashboard = () => {
   return (
@@ -21,7 +29,11 @@ const Dashboard = () => {
           <Card>
             <div className="side-card">
               <Card.Section>
-                <h1>Side Panel</h1>
+                <Listbox>
+                  <Listbox.Option vlaue="UniqueValue-1">
+                    <ProductList />
+                  </Listbox.Option>
+                </Listbox>
               </Card.Section>
             </div>
           </Card>
