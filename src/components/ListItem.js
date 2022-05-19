@@ -1,14 +1,16 @@
-import { Listbox, Thumbnail, Heading } from "@shopify/polaris";
+import { Listbox, Heading } from "@shopify/polaris";
 import info from "./info";
 import React from "react";
 
 const ListItem = () => {
-  let heading = info.data.products.edges[0].node.title;
-  return (
-    <Listbox.Option>
-      <Heading>{heading}</Heading>
-    </Listbox.Option>
-  );
+  var heading = [
+    info.data.products.edges.map((edges) => (
+      <Listbox.Option>
+        <Heading>{edges.node.title}</Heading>
+      </Listbox.Option>
+    )),
+  ];
+  return heading;
 };
 
 export default ListItem;
