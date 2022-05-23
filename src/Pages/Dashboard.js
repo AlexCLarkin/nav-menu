@@ -1,14 +1,6 @@
 import React from "react";
 import ProductList from "../components/ProductList";
-import ListItem from "../components/ListItem";
-import {
-  Page,
-  Card,
-  EmptyState,
-  Listbox,
-  Heading,
-  Thumbnail,
-} from "@shopify/polaris";
+import { Page, Card, EmptyState, Listbox } from "@shopify/polaris";
 
 const Dashboard = () => {
   return (
@@ -28,13 +20,11 @@ const Dashboard = () => {
         </div>
         <div className="side-panel">
           <Card>
-            <div className="side-card">
-              <Card.Section>
-                <Listbox>
-                  <ListItem />
-                </Listbox>
-              </Card.Section>
-            </div>
+            <Card.Section>
+              <Listbox>
+                <ProductList />
+              </Listbox>
+            </Card.Section>
           </Card>
         </div>
       </div>

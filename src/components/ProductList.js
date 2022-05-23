@@ -1,17 +1,14 @@
-import { Thumbnail, Card } from "@shopify/polaris";
+import { Listbox, Thumbnail, Heading } from "@shopify/polaris";
 import React from "react";
 import info from "./info";
 
 const ProductList = () => {
-  let product_tiles,
-    product_tile,
-    product_image,
-    product_title,
-    product_link,
-    product_check;
+  let product_image;
+  let product_heading;
 
   info.data.products.edges.forEach((edge) => {
     const product = edge.node;
+    product_heading = edge.node.title;
     if (
       product.media !== undefined &&
       product.media.edges !== undefined &&
@@ -27,14 +24,14 @@ const ProductList = () => {
           );
         }
       });
-    } else {
-      //TODO: change to empty image
-      product_image = "Nothing";
     }
-    product_tile = `<Card>`;
   });
-
-  return <div>{product_tiles}</div>;
+  return (
+    <Listbox.Option>
+      <Heading>{product_heading}</Heading>
+      {product_image}
+    </Listbox.Option>
+  );
 };
 
 export default ProductList;
