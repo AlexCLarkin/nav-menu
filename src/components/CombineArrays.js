@@ -1,13 +1,15 @@
 import info from "./info";
 import CheckboxList from "./CheckboxList";
 
-const CombineArrays = info.data.products.edges.map((v) => {
-  let obj = CheckboxList.find((o) => o.handle === v.node.handle);
+const CombineArrays = info.data.products.edges.map((edges) => {
+  let findHandle = CheckboxList.find(
+    (checkbox) => checkbox.handle === edges.node.handle
+  );
 
-  if (obj) {
-    v.node.checkbox = obj.checkbox;
+  if (findHandle) {
+    edges.node.checkbox = findHandle.checkbox;
   }
-  return v;
+  return edges;
 });
 
 console.log(CombineArrays);

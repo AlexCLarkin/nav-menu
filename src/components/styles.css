@@ -3,17 +3,16 @@
 
 }
 
-.center-panel {
-  margin-left: 10rem;
-  margin-right: 0rem;
-}
-
 .center-card {
-  padding-left: 12rem;
-  padding-right: 12rem;
+  padding-left: 9rem;
+  padding-right: 9rem;
 }
 
 .side-panel {
   margin-right: 0rem;
   margin-left: 0rem;
+}
+
+.checkbox-div {
+  margin-left: 20px;
 }
